@@ -1,5 +1,3 @@
-<?php   session_start();  ?>
-
 <?php
 session_start();    //session start
 if(!isset($_SESSION['username']))     //if session not found redirect to homepage
@@ -9,8 +7,6 @@ if(!isset($_SESSION['username']))     //if session not found redirect to homepag
 echo "Welcome &nbsp;";
 echo $_SESSION['username'];
 ?>
-
-
 <body>
 <?php
 
@@ -20,10 +16,6 @@ if (isset($_GET['add-to-cart'])) {
     }
     array_push($_SESSION['add-to-cart'], $_GET['add-to-cart']);
 }
-
-
-
-
 ?>
 
 <?php require 'inc/head.php'; ?>
@@ -79,7 +71,6 @@ if (isset($_GET['add-to-cart'])) {
                     <a  href="?add-to-cart=M M's© cookies" class="btn btn-primary">
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
                     </a>
-
                 </figcaption>
             </figure>
         </div>
@@ -92,3 +83,6 @@ if (isset($_GET['add-to-cart'])) {
 </form>
 
 <?php require 'inc/foot.php'; ?>
+
+</body>
+</html>
